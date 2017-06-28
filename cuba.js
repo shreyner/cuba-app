@@ -165,6 +165,9 @@ var cuba;
                     "Accept-Language": this.locale
                 }
             };
+            if (fetchOptions.credentials) {
+                settings.credentials = fetchOptions.credentials;
+            }
             if (this.restApiToken) {
                 settings.headers["Authorization"] = "Bearer " + this.restApiToken;
             }
